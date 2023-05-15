@@ -1,57 +1,72 @@
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.header {
     background-color: #2A2F4F;
     color: #ffffff;
     box-shadow: 0px 0px 30px #2A2F4F;
+    padding: 10px 20px;
+}
+
+.header--top {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
-header .logo {
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    align-self: center;
+}
+
+.header__circle-mask {
     width: 50px;
     height: 50px;
+    min-width: 50px;
     margin-right: 10px;
     overflow: hidden;
     border-radius: 50% 50% 50% 50%;
     box-shadow: none;
 }
 
-header .logo img {
+.header__logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: none;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.logolabel {
-    flex-grow: 1;
-    flex-shrink: 1;
+.header__title {
+    width: 100%;
     box-shadow: none;
     font-family: "Aquire";
 }
 
-body {
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    box-shadow: none;
+.header__nav {
+    display: flex;
+}
+
+.header__nav-item {
+    min-width: 110px;
+    text-align: center;
+    font-family: "Aquire";
+    font-size: 20px;
+}
+
+.home {
+    background-color: #1D267D;
+    color: #ffffff;
+    margin-top: 70px;
+}
+
+.home__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @font-face {
@@ -67,4 +82,140 @@ body {
 @font-face {
     font-family: Aquire;
     src: url(../Assets/Fonts/Aquire-BW0ox.otf);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }

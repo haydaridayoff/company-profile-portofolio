@@ -11,39 +11,52 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="Assets/LadyLogo.png" alt="logo">
+    <header class="header header--top">
+        <div class="header__container">
+            <div class="header__circle-mask">
+                <img class="header__logo" src="Assets/LadyLogo.png" alt="logo">
+            </div>
+            <h1 class="header__title">Oracles</h1>
+            <nav class="header__nav">
+                <div class="header__nav-item">
+                    <a href="#">Home</a>
+                </div>
+                <div class="header__nav-item">
+                    <a href="#">About Us</a>
+                </div>
+                <div class="header__nav-item">
+                    <a href="#">Pricing</a>
+                </div>
+            </nav>
         </div>
-        <h1 class="logolabel">Evort</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#"></a>
-            <a href="#">Contact Us</a>
-        </nav>
+
     </header>
     <main>
-        <section>
-            <div class="left">
-                <h1>Evort</h1>
-                <p>Evort is a company that provides services to other companies. We provide services such as
-                <ul>
-                    <li>Web Development</li>
-                    <li>App Development</li>
-                    <li>Software Development</li>
-                    <li>Graphic Designing</li>
-                    <li>Content Writing</li>
-                    <li>SEO</li>
-                    <li>Marketing</li>
-                </ul>
-                </p>
+        <section class="home">
+            <div class="home__background">
+                <img src="Assets/Background.png" alt="background">
             </div>
-            <div class="right">
-                <img src="Assets/LadyLogo.png" alt="CompanyLogo">
+            <div class="home__text">
+                <h2 class="home__title">Welcome to Oracles</h2>
+                <p class="home__description">We are company that provide fortune telling services</p>
+            </div>
+            <div class="home__button">
+                <button class="home__button--start">Get Started</button>
+                <button class="home__button--pricing">Come take your fortune told</button>
+            </div>
+            <div class="home__image">
+                <img src="Assets/Logo.png" alt="logo">
+            </div>
+        </section>
+        <section class="about">
+            <div>
+                Pricing for free trial, basic, standard and premium
             </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
