@@ -3,6 +3,7 @@
     color: #ffffff;
     box-shadow: 0px 0px 30px #2A2F4F;
     padding: 10px 20px;
+    z-index: 1;
 }
 
 .header--top {
@@ -44,6 +45,7 @@
     width: 100%;
     box-shadow: none;
     font-family: "Aquire";
+    font-size: 16px;
 }
 
 .header__nav {
@@ -55,7 +57,7 @@
     min-width: 110px;
     text-align: center;
     font-family: "Aquire";
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .home {
@@ -127,17 +129,18 @@
     border-style: solid;
     border-radius: 20px;
     background-color: #D4ADFC;
+    border-color: #D4ADFC;
     color: #000000;
     cursor: pointer;
 }
 
-.home__button--start:hover {
+.home__button--pricing:hover {
     border-color: #ffffff;
     background-color: #D4ADFC;
     color: #000000;
 }
 
-.home__button--pricing:hover {
+.home__button--start:hover {
     border-color: #ffffff;
     background-color: #D4ADFC;
     color: #000000;
@@ -155,6 +158,45 @@
     object-fit: cover;
     mix-blend-mode: luminosity;
     border-radius: 20px;
+}
+
+.about {
+    background-color: #0C134F;
+    color: #ffffff;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    padding-top: 300px;
+
+}
+
+.about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.about__text {
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.about__img-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 @font-face {
