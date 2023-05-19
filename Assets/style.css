@@ -168,22 +168,27 @@
     flex-direction: column;
     overflow: visible;
     padding-top: 300px;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-self: center;
     max-width: 1000px;
     width: 100%;
     margin-bottom: 100px;
+
+}
+
+.about__container--equal>* {
+    flex: 1;
 }
 
 .about__text {
     text-align: left;
-    flex-grow: 1;
-    flex-shrink: 1;
+    margin-right: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -192,11 +197,31 @@
     margin-bottom: 30px;
 }
 
+.about__description {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
 .about__img-container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.about__img--left {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about__img--right {
+    display: flex;
+    flex-direction: row;
+}
+
+.about__img-item {
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 @font-face {
