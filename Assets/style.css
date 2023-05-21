@@ -224,6 +224,147 @@
     margin-bottom: 20px;
 }
 
+.service {
+    background-image: url(../Assets/voyance-taromancy-cartomancy-tarot-fortune-telling-woman-femme-mains.jpg);
+    background-color: rgb(58, 36, 138);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.service__container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px 20px 100px 20px;
+}
+
+.service__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.service__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.service__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+    flex: 0 0 0;
+}
+
+.service__card>* {
+    min-width: 300px;
+}
+
+.service__card-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.service__card-img-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service__card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 1px 0px;
+    background-color: #0C134F;
+}
+
+.service__card-section--roundtop {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.service__card-section--roundbottom {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.service__card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.service__card-price {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.service__card-description {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.service__card-button {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffffff;
+    color: #0C134F;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #0C134F;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer__title {
+    font-size: 24px;
+    font-family: Aquire;
+}
+
 @font-face {
     font-family: California;
     src: url(../Assets/Fonts/CaliforniaPersonalUseRegular-L37ED.ttf);
@@ -238,6 +379,7 @@
     font-family: Aquire;
     src: url(../Assets/Fonts/Aquire-BW0ox.otf);
 }
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
