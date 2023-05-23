@@ -1,3 +1,30 @@
+.button {
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #D4ADFC;
+    background-color: transparent;
+    color: #D4ADFC;
+    cursor: pointer;
+}
+
+.button--burger {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.2rem;
+    border-style: solid;
+    border-color: transparent;
+    background-color: #D4ADFC;
+    display: none;
+}
+
+.icon {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .header {
     background-color: #2A2F4F;
     color: #ffffff;
@@ -51,6 +78,7 @@
 .header__nav {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 .header__nav-item {
@@ -378,6 +406,16 @@
 @font-face {
     font-family: Aquire;
     src: url(../Assets/Fonts/Aquire-BW0ox.otf);
+}
+
+@media only screen and (max-width:720px) {
+    .header__nav-item {
+        display: none;
+    }
+
+    .button--burger {
+        display: block;
+    }
 }
 
 
