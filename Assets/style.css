@@ -81,6 +81,20 @@
     align-items: center;
 }
 
+.header__nav--hidden {
+    display: none;
+}
+
+.header__nav--collumn {
+    display: block;
+    background-color: #2A2F4F;
+    flex-direction: column;
+}
+
+.header__nav--mobile {
+    flex-direction: column;
+}
+
 .header__nav-item {
     min-width: 110px;
     text-align: center;
@@ -409,12 +423,18 @@
 }
 
 @media only screen and (max-width:720px) {
-    .header__nav-item {
+    .header__nav--desktop {
         display: none;
     }
 
     .button--burger {
         display: block;
+    }
+}
+
+@media only screen and (min-width:721px) {
+    .header__nav--mobile {
+        display: none;
     }
 }
 
