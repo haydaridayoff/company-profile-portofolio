@@ -111,6 +111,20 @@
     font-size: 16px;
 }
 
+.header__nav-item > a:visited{
+    color: #D4ADFC;
+}
+
+.header__nav-item > a {
+    color: #D4ADFC;
+    text-decoration: none;
+}
+
+.header__nav-item:hover > a {
+    color: aqua;
+    text-decoration: underline;
+}
+
 .home {
     background-color: rgba(12, 19, 79, 0.8);
     color: #ffffff;

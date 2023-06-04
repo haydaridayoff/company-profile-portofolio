@@ -1,31 +1,18 @@
 const merchUrl = "https://fakestoreapi.com/products";
-let merch = [];
-
-
-function main(){
-    getMerchandise();
-}
+const getAllMerchAsync = getAllMerchandise;
+const arrMerchObj = [];
 
 function getServerResponse(response){
     return response.json();
 }
 
-function consoleOutput(input){
-    console.log(input);
-}
-
-function saveMerchandise(json){
-    let merchObj = JSON.stringify(json);
+function saveAllMerchandise(merchObj){
     localStorage.setItem("merchandise",merchObj);
-    merch = merchObj;
 }
 
-async function getMerchandise(){
+async function getAllMerchandise(){
     let response = await fetch(merchUrl);
-    let json = await getServerResponse(response);
+    let merchObj = await getServerResponse(response);
 
-    consoleOutput(json);
-    saveMerchandise(json);
+    return merchObj;
 }
-
-document.addEventListener("DOMContentLoaded",main);
