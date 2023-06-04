@@ -81,7 +81,6 @@
     align-items: center;
     max-height: 65px;
     width: 100%;
-    overflow: hidden;
 }
 
 .header__nav--hidden {
@@ -102,6 +101,7 @@
 
 .header__nav--mobile {
     flex-direction: column;
+    overflow: hidden;
 }
 
 .header__nav-item {
