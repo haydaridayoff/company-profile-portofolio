@@ -12,205 +12,27 @@
 
 <body>
     <main class="bg-violet-800 text-white">
-        <header class="fixed top-0 bg-violet-950 w-full flex flex-col items-center">
+        <header class="fixed p-3 top-0 bg-violet-950 w-full flex flex-col items-center">
             <div class="flex justify-between items-center max-w-5xl w-full">
                 <div class="flex items-center">
                     <div class="overflow-hidden w-14 h-14 rounded-full">
                         <img class="h-full w-full" src="Assets/LadyLogo.png" alt="logo">
                     </div>
-                    <h1 class="text-4xl font-bold">Oracles</h1>
+                    <h1 class="text-4xl font-bold font-aquire">Oracles</h1>
                 </div>
                 <nav>
-                    <ul class="flex">
-                        <li class=""><a class="text-2xl p-2 m-2" href="index.html">Home</a></li>
-                        <li class=""><a class="text-2xl p-2 m-2" href="cart.html">Cart</a></li>
+                    <ul class="flex font-aquire text-violet-300">
+                        <li class=""><a class="text-2xl p-2 m-2 hover:text-cyan-300" href="index.html">Home</a></li>
+                        <li id="notif" class="relative">
+                            <a class="text-2xl p-2 m-2 hover:text-cyan-300" href="cart.html">Cart</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section class="bg-violet-400 border-8 border-blue-900 font-sans mt-14">
-            <div class="grid grid-flow-row lg:grid-cols-3 sm:grid-cols-1 gap-4 m-4 transition-all">
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
-                    <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
-                        <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
-                    </div>
-                    <div class="overflow-hidden flex flex-col h-40">
-                        <h2 class="merch__title min-h-6 max-h-16 font-bold text-lg overflow-hidden">Lorem Ipsum</h2>
-                        <p class="merch__desc min-h-12 max-h-24 overflow-y-auto">A deck of 78 cards that can be used for divination,
-                            self-reflection, and meditation.</p>
-                    </div>
-                    <p class="merch__price before:content-['$'] text-2xl font-bold p-2 self-center">20.00</p>
-                    <button class="merch__addBtn bg-violet-500 p-1 rounded-md overflow-hidden">Add to Cart</button>
-                </div>
-                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col">
+        <section class="bg-violet-400 border-8 border-blue-900 font-sans mt-20">
+            <div id="catalogue" class="grid grid-flow-row lg:grid-cols-3 sm:grid-cols-1 gap-4 m-4 transition-all">
+                <div class="merch bg-violet-800 p-3 shadow-lg flex flex-col hidden">
                     <div class="w-full h-80 bg-white overflow-hidden flex justify-center">
                         <img class="merch__image h-full w-auto" src="Assets/TarotCards.png" alt="merchandise-image" data-status="">
                     </div>
@@ -225,8 +47,6 @@
             </div>
         </section>
     </main>
-    <script src="js/Merchandise.js"></script>
-    <script src="js/Catalogue.js"></script>
+    <script type="module" defer src="js/MerchApp.js"></script>
 </body>
-
 </html>
