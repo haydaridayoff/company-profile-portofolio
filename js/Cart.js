@@ -45,12 +45,14 @@ export function addToCart(merchObj) {
     
     console.log("addToCart: arrCartItem.length = " + arrCartItem.length);
     setCartPersistance(arrCartItem);
-    notifyOnClickEventWithData("onAddToCartSuccess", arrCartItem);
+    updateTotalPrice();
+
+    notifyOnClickEventWithData("onAddToCartSuccess", arrCartItem, cartItem);
     
     return arrCartItem;
 }
 
-function removeFromCart(merchObj, onSuccess = () => {}) {
+function removeFromCart(merchObj) {
     if (merchObj === null || merchObj === undefined) {
         console.log("removeFromCart: merchObj is null or undefined");
         return null;
@@ -67,17 +69,31 @@ function removeFromCart(merchObj, onSuccess = () => {}) {
         return null;
     }
 
-    if (cartItem.quantity > 1) {
-        console.log("removeFromCart: cartItem.quantity > 1");
-        cartItem.quantity--;
-    } else {
-        console.log("removeFromCart: cartItem.quantity <= 1");
+    cartItem.quantity--;
+    if (cartItem.quantity <= 0) {
+        console.log("removeFromCart: cartItem.quantity <= 0");
         arrCartItem.splice(arrCartItem.indexOf(cartItem), 1);
     }
 
     setCartPersistance(arrCartItem);
-    onSuccess(arrCartItem);
+    updateTotalPrice();
+
     return arrCartItem;
+}
+
+function updateTotalPrice() {
+    let priceElement = document.querySelector(".total__price");
+    if (priceElement === null || priceElement === undefined) {
+        console.log("updateTotalPrice: priceElement is null or undefined");
+        return;
+    }
+
+    let total = 0;
+    arrCartItem.forEach(item => {
+        total += item.merchObj.price * item.quantity;
+    });
+    priceElement.textContent = total;
+    return total;
 }
 
 function addEmptyCartElement() {
@@ -123,18 +139,58 @@ function addCartElementInfo(cartElement, cartItem) {
 
     cartTitle.textContent = cartItem.merchObj.title;
     cartDescription.textContent = cartItem.merchObj.description;
-    cartPrice.textContent = cartItem.merchObj.price;
+    cartPrice.textContent = cartItem.merchObj.price * cartItem.quantity;
     cartImage.src = cartItem.merchObj.image;
     cartQuantity.textContent = cartItem.quantity;
 
     cartRemoveBtn.addEventListener("click", () => {
-        if (cartItem.quantity <= 1) {
-            cartElement.remove();
-        }
         removeFromCart(cartItem.merchObj);
+        updateCartItemInfo(cartItem, cartElement);
     });
 
     return cartElement;
+}
+
+function updateCartItemInfo(cartItem, cartElement) {
+    if (arrCartItem === null || arrCartItem === undefined) {
+        console.log("updateCartItemInfo: arrCartItem is null or undefined");
+        return;
+    }
+
+    if (cartItem === null || cartItem === undefined) {
+        console.log("updateCartItemInfo: cartItem is null or undefined");
+        return;
+    }
+    
+    if (cartElement === null || cartElement === undefined) {
+        console.log("updateCartItemInfo: cartElement is null or undefined");
+        return;
+    }
+
+    console.log(cartItem);
+    if (cartItem.quantity <= 0) {
+        removeCartElement(cartElement);
+    }
+    else {
+        let cartPrice = cartElement.querySelector(".item__price");
+        let cartQuantity = cartElement.querySelector(".item__quantity");
+
+        cartPrice.textContent = cartItem.merchObj.price * cartItem.quantity;
+        cartQuantity.textContent = cartItem.quantity;
+    }
+}
+
+function removeCartElement(cartElement) {
+    if (cartElement === null || cartElement === undefined) {
+        console.log("removeCartElement: cartElement is null or undefined");
+        return;
+    }
+
+    cartElement.remove();
+    if (arrCartItem.length <= 0) {
+        let cartContainer = document.querySelector(".item__container");
+        cartContainer.textContent = "Your cart is empty";
+    }
 }
 
 function addCartElementAll() {
