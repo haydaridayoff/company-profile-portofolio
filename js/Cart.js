@@ -19,6 +19,7 @@ export function cartInit() {
 
     console.log("cartInit: arrCartItem.length = " + arrCartItem.length);
     addCartElementAll();
+    updateTotalPrice();
 }
 
 export function addToCart(merchObj) {
