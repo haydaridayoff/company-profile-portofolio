@@ -94,7 +94,7 @@ function updateTotalPrice() {
         total += item.merchObj.price * item.quantity;
     });
     priceElement.textContent = total;
-    return total;
+    return total.toFixed(2);
 }
 
 function addEmptyCartElement() {
@@ -140,7 +140,7 @@ function addCartElementInfo(cartElement, cartItem) {
 
     cartTitle.textContent = cartItem.merchObj.title;
     cartDescription.textContent = cartItem.merchObj.description;
-    cartPrice.textContent = cartItem.merchObj.price * cartItem.quantity;
+    cartPrice.textContent = (cartItem.merchObj.price * cartItem.quantity).toFixed(2);
     cartImage.src = cartItem.merchObj.image;
     cartQuantity.textContent = cartItem.quantity;
 
